@@ -1,0 +1,151 @@
+.hidden {
+  display: none;
+}
+
+.ac-select-container {
+  margin: 5px 10px;
+}
+
+.ac-select-container.short {
+  width: 300px;
+}
+
+.ac-select-container input {
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+  min-height: 32px;
+  padding: 6px 4px;
+  box-sizing: border-box;
+  display: inline-block;
+  outline: none;
+  color: #333;
+  background-color: #FAFAFA;
+  border: 1px solid #CCC;
+  border-radius(1px);
+  box-shadow(0 1px 2px rgba(0, 0, 0, 0.075) inset);
+  vertical-align: middle;
+  line-height: 18px;
+}
+
+.ac-select-container input:focus {
+  background: #FFF;
+}
+
+.ac-select-container .ui-helper-hidden-accessible {
+    display: none;
+}
+
+.ac-results {
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: 0 0 10px;
+  padding: 0;
+  width: 298px !important;
+  max-height: 96px;
+  background: white;
+  border: 1px solid #cccccc;
+  border-top: none;
+}
+
+.ac-results li {
+  display: block;
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+}
+
+.ac-results li a {
+  display: block;
+  height: 24px;
+  padding: 4px;
+}
+
+.ac-results li a:hover, .ac-results li.ui-state-focus {
+  background: #cccccc;
+}
+
+.ac-results li img {
+  margin-right: 6px;
+  float: left;
+  width: 24px;
+  height: 24px;
+  background: #cccccc;
+  border-radius(1px);
+}
+
+.ac-results li span {
+  float: left;
+  font-family: 'Arial', sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  color: #222;
+  line-height: 24px;
+}
+
+.ac-items-list {
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: 0 0 10px;
+  padding: 0;
+  max-height: 128px;
+  border: 1px solid #bbbbbb;
+  border-top: none;
+  border-radius(1px);
+}
+
+.ac-items-list li {
+  display: block;
+  width: 100%;
+  position: relative;
+  background: #fafafa;
+}
+
+.ac-items-list li a {
+  height: 24px;
+  padding: 4px;
+  text-decoration: none;
+  display: block;
+}
+
+.ac-items-list li:nth-child(odd) {
+  background: #ebebeb;
+}
+
+.ac-items-list li img {
+  margin-right: 6px;
+  float: left;
+  width: 24px;
+  height: 24px;
+  background: #cccccc;
+  border-radius(1px);
+}
+
+.ac-items-list li span {
+  text-shadow(0 1px 0 white);
+  line-height: 24px;
+}
+
+.ac-items-list .ac-item-label {
+  float: left;
+  font-family: 'Arial', sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  color: #222;
+}
+
+.ac-items-list .ac-remove-item {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 4px;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #888;
+}
+
+.ac-items-list .ac-remove-item:hover {
+  color: #444;
+}
+

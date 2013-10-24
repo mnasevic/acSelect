@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>acSelect.js plugin by Milan Nasevic</title>
+  <meta name="author" content="Milan Nasevic" />
+  <meta name="description" content="jQuery select box replacement" />
+  <meta name="keywords"  content="acSelect, select,autocomplete,jquery,plugin,milan,nasevic" />
+  <meta name="Resource-type" content="Document" />
+
+  <link rel="stylesheet" type="text/css" href="build/acSelect.css" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+
+  <script type="text/javascript" src="build/jquery.acSelect.js"></script>
+  <script type="text/javascript">
+          $(document).ready(function() {
+            $("#collection1").acSelect();
+            $("#collection2").acSelect();
+
+              var selectData = [
+                {id: 1, title: "Flight", thumbnail: "images/flight.jpg"},
+                {id: 2, title: "Argo", thumbnail: "images/argo.jpg"},
+                {id: 3, title: "Life of Pi", thumbnail: "images/life_of_pi.jpg"},
+                {id: 4, title: "The Hobbit", thumbnail: "images/the_hobbit.jpg"},
+                {id: 6, title: "Madagascar 3", thumbnail: "images/madagaskar.jpg"},
+                {id: 7, title: "Lincoln", thumbnail: "images/lincoln.jpg"},
+                {id: 8, title: "The Croods", thumbnail: "images/the_croods.jpg"}
+              ];
+
+              var preselectData = [
+                {id: 5, title: "Ted", thumbnail: "images/ted.jpg"}
+              ];
+
+            $("#collection3").acSelect({
+                acLabel: 'title',
+                acImage: 'thumbnail',
+                acSelectData: selectData,
+                acPreSelectData: preselectData
+              });
+
+
+          });
+  </script>
+
+</head>
+<body>
+  <p>Enter some term to test acSelect (Flight, Argo, Life of Pi, The Hobbit, Ted, Madagascar 3, Lincoln, The Croods)</p>
+  <!-- HTML - simple select, only with title -->
+  <div class="ac-select-container short">
+    <h2 class='title'>1. Simple select (title)</h2>
+    <select multiple="multiple" name="collection[video_ids][]" id="collection1" class="hidden">
+      <option value="1">Flight</option>
+      <option value="2">Argo</option>
+      <option value="3">Life of Pi</option>
+      <option value="4">The Hobbit</option>
+      <option value="5">Ted</option>
+      <option value="6">Madagascar 3</option>
+      <option value="7">Linkoln</option>
+      <option value="8">The Croods</option>
+    </select>
+  </div>
+
+  <!-- HTML - advanced select with title and image (through data attribute) -->
+  <div class="ac-select-container short">
+    <h2 class='title'>2. Advanced select (title and image)</h2>
+    <select multiple="multiple" name="collection[video_ids][]" id="collection2" class="hidden">
+      <option data-image="images/flight.jpg" value="1">Flight</option>
+      <option data-image="images/argo.jpg" value="2">Argo</option>
+      <option data-image="images/life_of_pi.jpg" value="3">Life of Pi</option>
+      <option data-image="images/the_hobbit.jpg" value="4">The Hobbit</option>
+      <option data-image="images/ted.jpg" selected="selected" value="5">Ted</option>
+      <option data-image="images/madagaskar.jpg" value="6">Madagascar 3</option>
+      <option data-image="images/lincoln.jpg" value="7">Lincoln</option>
+      <option data-image="images/the_croods.jpg" value="8">The Croods</option>
+    </select>
+  </div>
+
+  <!-- HTML - input select -->
+  <div class="ac-select-container short">
+    <h2 class='title'>3. Input select</h2>
+    <input type="text" placeholder="Search any term..." id="collection3">
+  </div>
+</body>
+</html>

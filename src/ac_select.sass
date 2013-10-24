@@ -1,0 +1,102 @@
+.ac-select-container
+  margin: 5px 10px
+
+  &.short
+    width: 300px
+
+  input
+    width: 100%
+
+  .ui-helper-hidden-accessible
+    display: none
+
+.ac-results
+  overflow-y: auto
+  overflow-x: hidden
+  margin: 0 0 10px
+  padding: 0
+  width: 298px !important
+  max-height: 96px
+  background: #FFF
+  border: 1px solid #CCC
+  border-top: none
+
+  li
+    width: 100%
+    position: relative
+    cursor: pointer
+
+    a
+      display: block
+      height: 24px
+      padding: 4px
+
+      &:hover, &.ui-state-focus
+        background: #CCC
+
+    img
+      margin-right: 6px
+      float: left
+      width: 24px
+      height: 24px
+      background: #CCC
+      +border-radius(1px)
+
+    span
+      float: left
+      +normal-text(12px, normal, $dark)
+      line-height: 24px
+
+.ac-items-list
+  overflow-y: auto
+  overflow-x: hidden
+  margin: 0 0 10px
+  padding: 0
+  max-height: 128px
+  border: 1px solid #BBB
+  border-top: none
+  +border-radius(1px)
+
+  li
+    width: 100%
+    position: relative
+    background: #FAFAFA
+
+    a
+      height: 24px
+      padding: 4px
+      text-decoration: none
+      display: block
+
+      // &:hover, &.ui-state-focus
+      //   +opacity(0.8)
+
+    &:nth-child(odd)
+      background: #EBEBEB
+
+    img
+      margin-right: 6px
+      float: left
+      width: 24px
+      height: 24px
+      background: #CCC
+      +border-radius(1px)
+
+    span
+      +text-shadow(0 1px 0 #FFF)
+      line-height: 24px
+
+      &.ac-item-label
+        float: left
+        +normal-text(12px, normal, $dark)
+
+      &.ac-remove-item
+        cursor: pointer
+        position: absolute
+        right: 10px
+        top: 4px
+        +normal-text(16px, bold, lighten($medium-dark, 25%))
+
+        &:hover
+          color: $medium-dark
+
